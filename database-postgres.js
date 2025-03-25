@@ -4,7 +4,6 @@ import sql from './dbs.cjs'
 export class DatabasePostgres {
   #itens = new Map()
 
-  //set (~array que nao aceita valores duplicados), map(obj)
   async create(video)
   {
     const videoId = randomUUID()
@@ -21,10 +20,7 @@ export class DatabasePostgres {
     let videos 
     if(search)
     {
-      // seleciona toso os videos onde o titulo contenha o termo search, independente da caixa alto/baixa (ilike) 
-      // e da ordem das palavras no titulo (%palavra buscada%)
       videos = await sql`select * from videos where title ilike ${'%' + search + '%'}`
-      
     }
     else
     {

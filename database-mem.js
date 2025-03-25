@@ -3,7 +3,6 @@ import { randomUUID } from "node:crypto"
 export class DatabaseMemory {
   #itens = new Map()
 
-  //set (~array que nao aceita valores duplicados), map(obj)
   create(video)
   {
     const videoId = randomUUID()

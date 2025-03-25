@@ -5,14 +5,11 @@ const server = fastify()
 
 const database = new DatabasePostgres()
 
-// post, get, put, delete
-// Route Parameter /:id
-// Request body post e put (pode enviar um corpo pra esses, enviar o formulario)
 server.post('/videos', async (request, reply) => {
   const { title, description, duration } = request.body
 
   await database.create({
-    title, //title: titulo
+    title,
     description,
     duration,
   })
