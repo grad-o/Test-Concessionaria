@@ -1,0 +1,27 @@
+POST http://localhost:3300/videos
+Content-Type: application/json
+
+{
+  "title": "video bacana",
+  "description": "primeiro video",
+  "duration": 199
+}
+
+###
+
+GET http://localhost:3300/videos
+
+###
+
+PUT http://localhost:3300/videos/42bc4085-fe37-4d7d-9844-3b946f24f242
+Content-Type: application/json
+
+{
+  "title": "video bacana",
+  "description": "segundo video",
+  "duration": 199
+}
+
+###
+
+DELETE http://localhost:3300/videos/8dd364f0-fa50-4648-9c49-42ee3c519102
